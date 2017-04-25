@@ -1,0 +1,30 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="trackme.test.com.myapplication.fragments.TrackMeFragment">
+
+    <ng.max.slideview.SlideView
+        android:id="@+id/slideView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:buttonBackgroundColor="@color/colorPrimary"
+        app:buttonImage="@drawable/ic_chevron_double_right_white"
+        app:slideBackgroundColor="@color/colorAccent"
+        app:slideText="@string/title_track_me"
+        app:slideTextColor="@android:color/white"
+        app:animateSlideText="true"
+        app:reverseSlide="false"
+        android:layout_alignParentBottom="true"/>
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/slideView"
+        class="com.google.android.gms.maps.SupportMapFragment" />
+
+
+
+</RelativeLayout>
